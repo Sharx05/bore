@@ -1,0 +1,182 @@
+#include<stdio.h>
+void main()
+{
+        char st1[100],st2[100];
+        int i=0,j=0,count=0;
+        printf("enter a string : ");
+        scanf("%s",st1);
+        while(st1[i]!='\0')
+        {
+                count=count+1;
+                i++;
+        }
+        i=count-1;
+        do
+        {
+                st2[j]=st1[i];
+                j++;
+                i--;
+        }while(i>=0);
+        st2[j]='\0';
+        printf("%s\n",st2);
+}
+   
+   
+   
+#include<stdio.h>
+void main()
+{
+        char st[100];
+        int i,count=0;
+        printf("enter a string : ");
+        scanf("%s",st);
+        for(i=0;st[i]!='\0';i++)
+        {
+                if(st[i]=='a'||st[i]=='e'||st[i]=='i'||st[i]=='o'||st[i]=='u'||st[i]==>
+                {
+                        count=count+1;
+                }
+        }
+        printf("No: of vowels = %d\n",count);
+}
+
+
+
+
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+        char st1[100],st2[100];
+        int l;
+        printf("enter the first string : ");
+        gets(st1);
+        printf("enter the second string : ");
+        gets(st2);
+        strcat(st1,st2);
+        l=strlen(st1);
+        printf("string concantenate:%s\n",st1);
+        printf("length of the string = %d\n",l);
+
+}
+
+
+
+#include<stdio.h>
+void palindrome();
+void main()
+{
+        palindrome();
+}
+void palindrome()
+{
+        int n,rem,rev=0,p;
+        printf("read the value of n");
+        scanf("%d",&n);
+        p=n;
+        while(n>0)
+        {
+                rem=n%10;
+                rev=rev*10+rem;
+                n=n/10;
+        }
+        if(p==rev)
+        {
+                printf("%d is palindrome\n",p);
+        }
+        else
+        {
+                printf("%d is not palindrome\n",p);
+        }
+}
+
+
+
+#include<stdio.h>
+void prime(int);
+void main()
+{
+        int a;
+        printf("Enter a no : ");
+        scanf("%d",&a);
+        prime(a);
+}
+void prime(int k)
+{
+        int i,flag=0;
+        if(k==1)
+                printf("1 is neither prime or compositen\n");
+        else if(k==2)
+                printf("2 is a prime number\n");
+        else
+        {
+                for(i=2;i<=(k/2);i++)
+                {
+                        if(k%i==0)
+                        {
+                                flag=1;
+                                break;
+                        }
+                 }
+                if(flag==0)
+                        printf("%d is a prime number\n",k);
+                else
+                        printf("%d is not a prime number\n",k);
+
+        }
+}
+
+
+
+
+
+#include<stdio.h>
+int large(int[],int);
+void main()
+{
+        int ar[100],n,i,as;
+        printf("Enter the size of array :");
+        scanf("%d",&n);
+        printf("Enter the elements for the array: \n");
+        for(i=0;i<n;i++)
+                scanf("%d",&ar[i]);
+        as=large(ar,n);
+        printf("Largest element in the array is : %d\n",as);
+}
+int large(int a[],int h)
+{
+        int l,p;
+        l=a[0];
+        for(p=1;p<=h;p++)
+                if(l<a[p])
+                        l=a[p];
+        return l;
+}
+
+
+
+
+#include<stdio.h>
+struct student
+{
+        char name[100];
+        int age,roll;
+        float mar1,mar2,mar3;
+}s;
+void main()
+{
+        float t;
+        printf("enter the name,age,roll no: of the student");
+        scanf("%s%d%d",s.name,&s.age,&s.roll);
+        printf("enter the marks of the subjects : ");
+        scanf("%f%f%f",&s.mar1,&s.mar2,&s.mar3);
+        t=s.mar1+s.mar2+s.mar3;
+        printf("Name=%s \n Age=%d \n Roll no:=%d \n Mark1=%f \n Mark2=%f \n Mark3=%f \>
+}
+
+
+
+
+
+
+
